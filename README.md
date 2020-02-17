@@ -1,0 +1,1 @@
+Application which can help remember different things, and to organise meetings.
