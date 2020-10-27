@@ -15,7 +15,11 @@
         android:text="Zakup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_alignBottom="@+id/addShopping"
+=======
+        android:layout_alignBottom="@+id/dodajZakup"
+>>>>>>> ff58cace025467ee4077eaf3494dbadffe3f31d5
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="17dp"
@@ -24,10 +28,17 @@
         android:id="@+id/textView" />
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/addShopping"
+=======
+        android:id="@+id/dodaj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dodajZakup"
+>>>>>>> ff58cace025467ee4077eaf3494dbadffe3f31d5
         android:layout_marginStart="96dp"
         android:layout_marginLeft="96dp"
         android:layout_marginTop="48dp"
@@ -36,7 +47,11 @@
         android:text="Dodaj" />
 
     <EditText
+<<<<<<< HEAD
         android:id="@+id/addShopping"
+=======
+        android:id="@+id/dodajZakup"
+>>>>>>> ff58cace025467ee4077eaf3494dbadffe3f31d5
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -50,10 +65,17 @@
         android:text="Name" />
 
     <EditText
+<<<<<<< HEAD
         android:id="@+id/list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/add"
+=======
+        android:id="@+id/lista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dodaj"
+>>>>>>> ff58cace025467ee4077eaf3494dbadffe3f31d5
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="126dp"
