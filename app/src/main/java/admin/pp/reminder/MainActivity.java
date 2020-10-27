@@ -7,11 +7,7 @@ import android.os.Bundle;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-<<<<<<< HEAD
-
-=======
 import java.sql.SQLException;
->>>>>>> ff58cace025467ee4077eaf3494dbadffe3f31d5
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,19 +15,11 @@ import java.sql.Statement;
 import java.sql.PreparedStatement;
 
 
-<<<<<<< HEAD
-public class MainActivity extends AppCompatActivity {
-
-    Button btn1, events;
-    EditText addShopping;
-    EditText shoppingList;
-=======
 public class MainActivity extends AppCompatActivity{
 
     Button btn1, events;
-    EditText dodajZakup;
-    EditText listaZakupow;
->>>>>>> ff58cace025467ee4077eaf3494dbadffe3f31d5
+    EditText addShopping;
+    EditText list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,38 +28,18 @@ public class MainActivity extends AppCompatActivity{
         init();
     }
 
-<<<<<<< HEAD
-    private void init() {
-        addShopping = (EditText) findViewById(R.id.addShopping);
-        shoppingList = (EditText) findViewById(R.id.list);
-        btn1 = (Button) findViewById(R.id.add);
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                shoppingList.setText(Query("SELECT TOP 10 Title, FirstName, LastName from SalesLT.Customer"));
-            }
-        });
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Query("INSERT INTO SalesLT.Product (Name, ProductNumber, Color, StandardCost, ListPrice, SellStartDate) VALUES " + addShopping.getText());
-            }
-        });
-        events = (Button) findViewById(R.id.Events);
-        events.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-=======
     private void init(){
-        dodajZakup=(EditText)findViewById(R.id.dodajZakup);
-        listaZakupow=(EditText)findViewById(R.id.lista);
-        btn1=(Button)findViewById(R.id.dodaj);
+        addShopping=(EditText)findViewById(R.id.addShopping);
+        list=(EditText)findViewById(R.id.list);
+        btn1=(Button)findViewById(R.id.add);
         btn1.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                listaZakupow.setText(SelectQuery());
+                list.setText(Query("SELECT TOP 10 Title, FirstName, LastName from SalesLT.Customer"));
+                Query("INSERT INTO SalesLT.Product (Name, ProductNumber, Color, StandardCost, ListPrice, SellStartDate) VALUES "
+                        + addShopping.getText());
             }
         });
         events=(Button)findViewById(R.id.Events);
@@ -80,18 +48,13 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v)
             {
->>>>>>> ff58cace025467ee4077eaf3494dbadffe3f31d5
                 Intent browsIntent2 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://prochnicki.yum.pl/Nano.php"));
                 startActivity(browsIntent2);
             }
         });
     }
 
-<<<<<<< HEAD
     String Query(String query) {
-=======
-    String SelectQuery() {
->>>>>>> ff58cace025467ee4077eaf3494dbadffe3f31d5
         String connectionString =
                 "jdbc:sqlserver://sqlserverapp.database.windows.net:1433;"
                         + "database=database1;"
@@ -112,11 +75,7 @@ public class MainActivity extends AppCompatActivity{
             connection = DriverManager.getConnection(connectionString);
 
             // Create and execute a SELECT SQL statement.
-<<<<<<< HEAD
             selectSql = query;
-=======
-            selectSql = "SELECT TOP 10 Title, FirstName, LastName from SalesLT.Customer";
->>>>>>> ff58cace025467ee4077eaf3494dbadffe3f31d5
             statement = connection.createStatement();
             resultSet = statement.executeQuery(selectSql);
 
@@ -146,10 +105,6 @@ public class MainActivity extends AppCompatActivity{
         return selectSql;
     }
 
-<<<<<<< HEAD
-
-
-=======
     void InsertQuery() {
         String connectionString =
                 "jdbc:sqlserver://sqlserverapp.database.windows.net:1433;"
@@ -208,7 +163,6 @@ public class MainActivity extends AppCompatActivity{
             }
         }
     }
->>>>>>> ff58cace025467ee4077eaf3494dbadffe3f31d5
 
 
 }
