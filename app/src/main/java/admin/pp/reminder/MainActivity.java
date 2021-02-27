@@ -14,9 +14,7 @@ import android.widget.EditText;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
 
-
 public class MainActivity extends AppCompatActivity{
-
     Button btn1, events;
     EditText addShopping;
     EditText list;
@@ -27,7 +25,6 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
         init();
     }
-
     private void init(){
         addShopping=(EditText)findViewById(R.id.addShopping);
         list=(EditText)findViewById(R.id.list);
@@ -64,21 +61,17 @@ public class MainActivity extends AppCompatActivity{
                         + "trustServerCertificate=false;"
                         + "hostNameInCertificate=*.database.windows.net;"
                         + "loginTimeout=30;";
-
         // Declare the JDBC objects.
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
         String selectSql = null;
-
         try {
             connection = DriverManager.getConnection(connectionString);
-
             // Create and execute a SELECT SQL statement.
             selectSql = query;
             statement = connection.createStatement();
             resultSet = statement.executeQuery(selectSql);
-
             // Print results from select statement
             while (resultSet.next()) {
                 System.out.println(resultSet.getString(2) + " "
